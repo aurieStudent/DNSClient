@@ -14,7 +14,7 @@ domainList = ['www.opendns.com', 'chase.com', 'google.com', 'nyu.edu', 'reddit.c
 def query_local_dns_server(domain, question_type):
     resolver = dns.resolver.Resolver()
     resolver.nameservers = [local_host_ip]
-    answers = resolver.resolve(domain, 'A')  # provide the domain and question_type
+    answers = resolver.resolve(domain, question_type)  # provide the domain and question_type
 
     ip_address = answers[0].to_text()
     return ip_address
@@ -26,7 +26,7 @@ def query_local_dns_server(domain, question_type):
 def query_dns_server(domain, question_type):
     resolver = dns.resolver.Resolver()
     resolver.nameservers = [real_name_server]
-    answers = resolver.resolve(domain, 'A')  # provide the domain and question_type
+    answers = resolver.resolve(domain, question_type)  # provide the domain and question_type
 
     ip_address = answers[0].to_text()
     return ip_address
