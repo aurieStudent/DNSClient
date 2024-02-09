@@ -1,5 +1,7 @@
 import dns.resolver
 
+ #This is Aurielle I am taking this course again and have approval to reuse this code.
+
 # Set the IP address of the local DNS server and a public DNS server
 local_host_ip = '127.0.0.1'
 real_name_server = '208.67.222.222' #Open DNS  # Research public DNS servers to find a valid DNS server IP address to use
